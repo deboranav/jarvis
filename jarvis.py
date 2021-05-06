@@ -90,6 +90,14 @@ if __name__ == "__main__":
         if 'obrigada' in Frase:
             speak("De nada, estou as ordens")
             break
+            
+        elif 'wikipédia' in Frase:
+            speak("Pesquisando...")
+            Frase = Frase.replace ('Wikipédia', '')
+            result = wikipedia.summary(Frase, sentences = 3)
+            speak("De acordo com a wikipedia")
+            print(result)
+            speak(result)
 
 
 
